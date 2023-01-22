@@ -9,13 +9,14 @@ namespace IterationStatements
         //Call the methods to test them in the Main method below
         static void Main(string[] args)
         {
-            Multi();
+            Run();
             Console.ReadLine();
         }
 
         //Write a method that will print to the console all numbers 1000 through - 1000
         public static void PrintThousand()
         {
+            Console.WriteLine("Hello there! We will show your number from 1000 to -1000.");
             for (int i = 1000; i >= -1000; i--)
             {
                 Console.WriteLine(i);
@@ -24,21 +25,34 @@ namespace IterationStatements
         //Write a method that will print to the console numbers 3 through 999 by 3 each time
         public static void Threes()
         {
+            Console.WriteLine("Now we will show you increments of 3.");
             for (int k = 3; k <= 999; k += 3)
             {
                 Console.WriteLine(k);
             }
         }
         //Write a method to accept two integers as parameterss and check whether they are equal or not
-        public static bool IsEqual(int a, int b)
+        public static bool IsEqual()
+
+
         {
-            var check = (a == b) ? true : false;
-            return check;
+            Console.WriteLine("Please enter a number:");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter a second number:");
+            int b = int.Parse(Console.ReadLine());
+            if (a == b)
+            {
+                Console.WriteLine("The numbers are equal.");
+                return true;
+            }
+
+            Console.WriteLine("The numbers are not equal.");
+            return false;
         }
         //Write a method to check whether a given number is even or odd
         public static void Odd()
         {
-            Console.WriteLine("Write a number");
+            Console.WriteLine("Now, lets see if a number is even or odd. Enter a number");
             int num = int.Parse(Console.ReadLine());
             Console.ReadLine();
 
@@ -72,7 +86,7 @@ namespace IterationStatements
         }
         public static void Vote()
         {
-            Console.WriteLine("Please enter your age:");
+            Console.WriteLine("Lets see if you can vote. Please enter your age:");
 
             var age = int.Parse(Console.ReadLine());
             if (age >= 18)
@@ -119,6 +133,19 @@ namespace IterationStatements
             Console.WriteLine($"Here are the results: {multNumb*1},{multNumb*2}, {multNumb*3}, {multNumb * 4}, {multNumb * 5}, {multNumb * 6}, {multNumb * 7}, {multNumb * 8}, {multNumb * 9},{multNumb * 10}, {multNumb * 11}, {multNumb * 12}");
         }
 
+        public static void Run()
+        {
+            PrintThousand();
+            Threes();
+            IsEqual();
+            Odd();
+            Check();
+            Vote();
+            Range();
+            Multi();
+            Console.WriteLine("I hope you liked our little game. We will see you next time!");
+
+        }
 
 
 
